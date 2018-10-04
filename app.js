@@ -56,9 +56,6 @@ document.querySelector('.player-1-panel').classList.toggle('active');
 
 document.querySelector('.btn-hold').addEventListener('click',function(){
 scores[activePlayer] += roundScore;
-console.log(scores[activePlayer]);
-console.log(roundScore);
-
 document.querySelector('#score-'+activePlayer).textContent = scores[activePlayer];
 
 if(scores[activePlayer]>=20)
@@ -86,5 +83,13 @@ document.getElementById('current-0').textContent = '0';
 document.getElementById('current-1').textContent = '0';
 document.querySelector('.btn-roll').style.display = 'block';
 document.querySelector('.btn-hold').style.display = 'block';
-
+scores=[0,0];
+roundScore=0;
+activePlayer=0;
+document.querySelector('#name-0').textContent = "Player 1";
+document.querySelector('#name-1').textContent = "Player 2";
+document.querySelector('.player-0-panel').classList.remove('active');
+document.querySelector('.player-1-panel').classList.remove('active');
+document.querySelector('.player-0-panel').classList.add('active');
 });
+
